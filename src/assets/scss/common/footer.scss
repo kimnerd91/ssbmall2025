@@ -1,0 +1,89 @@
+/* 컬러 B&W */
+
+$color01: #000000;
+$color02: #26282C;
+$color03: #484B51;
+$color04: #696E76;
+$color05: #838B94;
+$color06: #AAB0BB;
+$color07: #C6CBD0;
+$color08: #DDE1E4;
+$color09: #EBEEF0;
+$color10: #F7F7F8;
+$color11: #FFFFFF;
+
+/* PointColor */
+
+$mainPoint: #1412bb;
+$subPoint: #C0EBA6;
+
+$statusRed: #f23f3f;
+$statusYellow: #ffd338;
+$statusBlue: #287eff;
+
+/* 보더컬러 GrayTone */
+
+$BDC01: #ebeef0;
+$BDC02: #696e76;
+$BDC03: #c6cbd0;
+$BDC04: #484b51;
+$BDC05: #45484d;
+$BDC06: #86888a;
+$BDC07: #65696e;
+$BDC08: #8c8c8e;
+
+
+footer {
+    margin: 0 auto;
+    border-top: 1px solid;
+    border-color: $BDC03;
+    padding: 2rem 1.5rem;
+    gap: 3rem;
+
+    img {
+        height: 2.5rem;
+    }
+
+    ul {
+        margin: 1.5rem 0 2.5rem 0 !important;
+        padding-left: 0;
+        gap: 1.5rem;
+
+        li {
+            a {
+                color: $color02;
+            }
+        }
+    }
+
+    p.companyInfo {
+        margin-bottom: 4rem!important;
+        font-size: 0.6rem;
+    }
+
+    h6 {
+        font-size: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    footer {
+        img {
+            height: 1.5rem;
+        }
+        ul {
+            gap: 0.5rem;
+            margin: 1.5rem 0 1.5rem 0 !important;
+            li {
+                a {
+                    font-size: 0.75rem;
+                }
+            }
+        }
+     p.companyInfo {
+        font-size: 0.625rem;
+        text-align: left;
+        margin-bottom: 2rem!important;
+     }
+    }
+}

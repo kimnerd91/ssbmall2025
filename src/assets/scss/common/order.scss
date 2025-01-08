@@ -1,0 +1,293 @@
+/* 컬러 B&W */
+
+$color01: #000000;
+$color02: #26282C;
+$color03: #484B51;
+$color04: #696E76;
+$color05: #838B94;
+$color06: #AAB0BB;
+$color07: #C6CBD0;
+$color08: #DDE1E4;
+$color09: #EBEEF0;
+$color10: #F7F7F8;
+$color11: #FFFFFF;
+
+/* PointColor */
+
+$mainPoint: #1412bb;
+$subPoint: #C0EBA6;
+
+$statusRed: #f23f3f;
+$statusYellow: #ffd338;
+$statusBlue: #287eff;
+
+/* 보더컬러 GrayTone */
+
+$BDC01: #ebeef0;
+$BDC02: #696e76;
+$BDC03: #c6cbd0;
+$BDC04: #484b51;
+$BDC05: #45484d;
+$BDC06: #86888a;
+$BDC07: #65696e;
+$BDC08: #8c8c8e;
+
+.orderWrap {
+    .orderHeader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid;
+        border-color: $color01;
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            padding: 2rem 0;
+
+            li {
+                p {
+                    transition: all 0.3s;
+                }
+            }
+        }
+    }
+
+    .orderLeft {
+        border-right: 1px solid;
+        border-color: $BDC05;
+        text-align: left;
+        padding: 4rem 2rem 3rem 1.5rem;
+
+        .step1 {
+            div {
+                margin-bottom: 1rem;
+            }
+
+            label {
+                margin-bottom: 0.5rem;
+            }
+
+            input {
+                width: 100%;
+                border: none;
+                border-bottom: 1px solid;
+                border-color: #696E76;
+                width: 100%;
+                padding: 0.5rem 0.5rem;
+            }
+
+
+
+            input.plusAddress {
+                margin-top: 0.5rem;
+            }
+
+            input::placeholder {
+                color: $color05;
+            }
+
+            button.position-absolute {
+                top: 0;
+                right: 0;
+                text-decoration: underline;
+                color: $color05;
+                font-size: 0.75rem;
+            }
+
+            textarea {
+                width: 100%;
+                padding: 1rem;
+                min-height: 10rem;
+            }
+
+            .extraDiv {
+                margin-bottom: 4rem;
+            }
+
+            .btn-primary {
+                width: 100%;
+                height: 3rem;
+                padding: 0.5rem 0;
+                font-size: 1rem;
+            }
+        }
+
+        .step2 {
+            div {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 1rem;
+
+                h6 {
+                    margin-bottom: 1rem !important;
+                    font-size: 1.25rem;
+                }
+
+                label {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 0.75rem;
+
+                    input {
+                        margin-right: 0.5rem;
+                        accent-color: $mainPoint;
+                        width: 1rem;
+                        aspect-ratio: 1/1;
+                    }
+                }
+            }
+
+            div.dInfo {
+                margin-bottom: 4rem;
+            }
+
+            .btn-primary {
+                width: 100%;
+                height: 3rem;
+                padding: 0.5rem 0;
+                font-size: 1rem;
+                margin-top: 4rem;
+            }
+        }
+
+        .step3 {
+            p.confirmText {
+
+                word-break: keep-all;
+                margin-bottom: 0.75rem !important;
+
+                span {
+                    color: $mainPoint;
+                    font-size: 1.25rem;
+                }
+            }
+
+            div {
+                margin-bottom: 1rem;
+            }
+
+            em {
+                display: block;
+                height: 1px;
+                background-color: $BDC03;
+                margin-bottom: 2rem;
+            }
+
+            .btns {
+                width: 100%;
+
+                button {
+                    width: 100%;
+                    height: 3rem;
+                    font-size: 1rem;
+
+                    a {
+                        color: $color11;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    .orderRight {
+        padding: 4rem 1.5rem 3rem 2rem;
+        text-align: left;
+
+        img {
+            width: 100%;
+            aspect-ratio: 1/1;
+            max-width: 10rem;
+        }
+
+        .itemBox {
+            h6 {
+                color: $color01;
+                font-size: 1rem;
+                margin-bottom: 0.25rem !important;
+            }
+
+            span {
+                color: $color05;
+                font-size: 0.75rem;
+
+            }
+
+            p {
+                font-size: 0.75rem;
+                color: $color02;
+
+                span {
+                    margin-right: 0.2rem;
+                }
+            }
+
+            p.price {
+                font-size: 1rem;
+            }
+        }
+
+        .priceBox {
+            margin-top: 4rem;
+
+            li {
+                p {
+                    font-size: 0.75rem;
+                }
+
+                h6 {
+                    font-size: 0.9rem;
+                }
+            }
+
+            em {
+                height: 1px;
+                background-color: $color01;
+                display: block;
+                margin: 0.5rem 0;
+            }
+        }
+
+        .rightBox {
+            margin-top: 3rem;
+
+            div {
+                text-align: right;
+            }
+
+            p {
+                font-size: 0.6rem;
+            }
+
+            span {
+                font-size: 0.6rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .orderBody {
+        flex-direction: column;
+
+        .orderRight {
+            border-bottom: 1px solid;
+            border-color: $BDC03;
+        }
+
+        .orderLeft {
+
+            .step3 {
+                p.confirmText {
+                    word-break: normal;
+                    margin: 1rem 0!important;
+                }
+            }
+
+        }
+    }
+}

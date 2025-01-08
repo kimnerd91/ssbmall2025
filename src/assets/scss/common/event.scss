@@ -1,0 +1,182 @@
+/* 컬러 B&W */
+
+$color01: #000000;
+$color02: #26282C;
+$color03: #484B51;
+$color04: #696E76;
+$color05: #838B94;
+$color06: #AAB0BB;
+$color07: #C6CBD0;
+$color08: #DDE1E4;
+$color09: #EBEEF0;
+$color10: #F7F7F8;
+$color11: #FFFFFF;
+
+/* PointColor */
+
+$mainPoint: #1412bb;
+$subPoint: #C0EBA6;
+
+$statusRed: #f23f3f;
+$statusYellow: #ffd338;
+$statusBlue: #287eff;
+
+/* 보더컬러 GrayTone */
+
+$BDC01: #ebeef0;
+$BDC02: #696e76;
+$BDC03: #c6cbd0;
+$BDC04: #484b51;
+$BDC05: #45484d;
+$BDC06: #86888a;
+$BDC07: #65696e;
+$BDC08: #8c8c8e;
+
+
+.eventWrap {
+    gap: 2rem;
+    padding: 2rem;
+    margin: 2rem 0;
+
+    .eventBox.col-xl-4 {
+        width: 31.7%;
+    }
+
+    .eventBox {
+        margin-bottom: 2rem;
+        justify-content: space-between;
+
+
+
+
+
+
+        img {
+            width: 100%;
+            aspect-ratio: 1/1;
+            margin-bottom: 1rem;
+        }
+
+        h5 {
+            margin-bottom: 0.25rem !important;
+            font-size: 1.5rem;
+            color: $color01;
+        }
+
+        p {
+            font-size: 0.85rem;
+            margin-bottom: 0.25rem !important;
+            color: $color02;
+        }
+
+        span {
+            font-size: 0.75rem;
+            color: $color02;
+        }
+    }
+
+    .eventHeader {
+        margin-top: 4rem;
+        margin-bottom: 4.5rem;
+
+        label {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        h1 {
+            margin-bottom: 1rem !important;
+            font-size: 3rem;
+            word-break: keep-all;
+            color: $color01;
+        }
+
+        p {
+            margin-bottom: 0.5rem !important;
+            font-size: 1rem;
+        }
+
+        span {
+            color: $color01;
+            font-size: 0.75rem;
+        }
+
+    }
+
+    .eventBody {
+        margin-bottom: 5rem;
+
+        img {
+            width: auto;
+            margin-bottom: 2rem;
+        }
+
+        p {}
+    }
+
+    button {
+
+        a {
+            transition: all 1s;
+            color: $color11;
+            width: 100%;
+            display: block;
+        }
+    }
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+    .eventWrap {
+
+        padding: 0 1.25rem;
+
+        .col-xl-4 {
+            width: 44%
+        }
+
+        .eventBox {
+            h5 {
+                font-size: 1rem;
+            }
+            p {
+                font-size: 0.75rem;
+            }
+            span {
+                font-size: 0.5rem;
+            }
+        }
+        .eventHeader {
+            margin-top: 2rem;
+            margin-bottom: 3.5rem;
+
+            label {
+                font-size: 1rem;
+            }
+            h1 {
+                width: 80%;
+            }
+            p {
+                font-size: 1rem;
+            }
+            span {
+                font-size: 0.75rem;
+            }
+        }
+        .eventBody {
+            img {
+                width: 100%;
+            }
+        }
+
+        button.col-xl-4 {
+            padding: 0.5rem;
+            width: 100%;
+        }
+    }
+}

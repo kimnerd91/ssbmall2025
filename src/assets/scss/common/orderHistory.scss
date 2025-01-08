@@ -1,0 +1,380 @@
+/* 컬러 B&W */
+
+$color01: #000000;
+$color02: #26282C;
+$color03: #484B51;
+$color04: #696E76;
+$color05: #838B94;
+$color06: #AAB0BB;
+$color07: #C6CBD0;
+$color08: #DDE1E4;
+$color09: #EBEEF0;
+$color10: #F7F7F8;
+$color11: #FFFFFF;
+
+/* PointColor */
+
+$mainPoint: #1412bb;
+$subPoint: #C0EBA6;
+
+$statusRed: #f23f3f;
+$statusYellow: #ffd338;
+$statusBlue: #287eff;
+
+/* 보더컬러 GrayTone */
+
+$BDC01: #ebeef0;
+$BDC02: #696e76;
+$BDC03: #c6cbd0;
+$BDC04: #484b51;
+$BDC05: #45484d;
+$BDC06: #86888a;
+$BDC07: #65696e;
+$BDC08: #8c8c8e;
+
+.ohMain {
+    padding: 2rem 0 4rem 0;
+    font-size: 2rem;
+}
+
+.ohListDiv {
+    ul {
+        li {
+            color: $color05;
+            cursor: pointer;
+        }
+
+        li.active {
+            color: $color02;
+        }
+    }
+}
+
+
+.tableDiv {
+    margin-top: 1.5rem;
+    margin-bottom: 10rem;
+
+    table {
+        width: 100%;
+    }
+
+    thead {
+
+        th {
+            padding: 1rem 0;
+            border-top: 1px solid;
+            border-color: $BDC05;
+
+            &:first-child {
+                p {
+                    line-height: 1;
+                }
+
+                span {
+                    color: $color04;
+                    font-size: 0.75rem;
+                }
+            }
+        }
+    }
+
+    tbody {
+        border: 1px solid;
+        border-color: $BDC05;
+
+
+        td {
+            padding: 1rem 1rem;
+
+            a {
+                color: $color02;
+                cursor: pointer;
+
+
+            }
+
+            span {
+                cursor: pointer;
+            }
+
+            &:first-child {
+                p {
+                    line-height: 1;
+                }
+
+                span {
+                    font-size: 0.75rem;
+                }
+            }
+
+            &:last-child {
+                p {
+                    font-size: 0.75rem;
+                    color: $statusBlue;
+                }
+
+                span {
+                    font-size: 0.75rem;
+                    color: $statusBlue;
+                }
+            }
+
+            img {
+                width: 5rem;
+                aspect-ratio: 1/1;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+#noList {
+
+
+    padding: 5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border: 1px solid;
+    border-color: $BDC05;
+
+
+    h5 {
+        font-size: 1.25rem;
+        color: $color05;
+    }
+
+}
+
+.odTable {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+
+    table {
+        width: 100%;
+    }
+
+    thead {
+
+        th {
+            padding: 1rem 0;
+            border-top: 1px solid;
+            border-color: $BDC05;
+
+            &:first-child {
+                p {
+                    line-height: 1;
+                }
+
+                span {
+                    color: $color04;
+                    font-size: 0.75rem;
+                }
+            }
+        }
+    }
+
+    tbody {
+        border: 1px solid;
+        border-color: $BDC05;
+
+
+        td {
+            padding: 1rem 1rem;
+
+            a {
+                color: $color02;
+            }
+
+            &:first-child {
+                p {
+                    line-height: 1;
+                }
+
+                span {
+                    font-size: 0.75rem;
+                }
+            }
+
+            &:last-child {
+                p {
+                    font-size: 0.75rem;
+                    color: $statusBlue;
+                }
+
+                span {
+                    font-size: 0.75rem;
+                    color: $statusBlue;
+                }
+            }
+
+            img {
+                width: 100%;
+                max-width: 5rem;
+                aspect-ratio: 1/1;
+            }
+        }
+    }
+}
+
+.odDiv {
+    text-align: left;
+
+    h2 {
+        padding: 1.25rem;
+        border: 1px solid;
+        border-color: $BDC03;
+        font-size: 1rem;
+        padding-left: 1.5rem;
+        border-left: none;
+        border-right: none;
+        color: $color02;
+
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        padding-left: 1.5rem !important;
+        margin: 2.5rem 0 !important;
+        gap: 1.5rem;
+
+        li {
+            display: flex;
+            align-items: center;
+
+            h6 {
+                font-size: 1rem;
+                color: $color01;
+                line-height: 1;
+                width: 10rem;
+            }
+
+            p {
+                font-size: 1rem;
+                color: $color01;
+                line-height: 1;
+            }
+
+
+        }
+    }
+}
+
+.odDiv.cs {
+    li {
+        align-items: flex-start;
+
+        p {
+            font-size: 1rem;
+            line-height: 1.25;
+            letter-spacing: 0.01rem;
+        }
+
+        a {
+            font-size: 1rem;
+            line-height: 1.25;
+            color: $color02;
+            text-decoration: underline !important;
+            letter-spacing: 0.01rem;
+        }
+    }
+}
+
+.mobileList {
+    display: none;
+}
+
+@media screen and (max-width: 500px) {
+
+    .tableDiv {
+        table {
+            display: none;
+        }
+
+    }
+
+    .orderN {
+        margin-bottom: 1rem;
+    }
+
+    .odTable {
+        display: none;
+    }
+
+    .odDiv {
+        ul {
+            li {
+                h6 {
+                    width: 8rem;
+                }
+                p {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+
+    }
+    .odDiv.cs {
+        li {
+            p {
+                font-size: 0.8rem;
+            }
+            a {
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    .mobileList {
+        display: block;
+        margin-bottom: 1rem;
+
+        .moWrap {
+            padding: 0rem 0;
+
+            &:last-child {
+                border-bottom: 1px solid;
+                border-color: $BDC05;
+            }
+
+            .moListHeader {
+                border: 1px solid;
+                border-color: $BDC05;
+                padding: 0.5rem 0;
+                border-left: none;
+                border-right: none;
+            }
+
+            .moBody {
+                padding: 1rem 0;
+
+                span.name {
+                    font-size: 1rem;
+                }
+
+                p.price {
+                    font-size: 1rem;
+                    line-height: 1.5;
+                }
+
+                .deli {
+
+                    h6,
+                    p,
+                    span {
+                        font-size: 0.75rem !important;
+                    }
+                }
+
+            }
+        }
+
+        img {
+            width: 5rem;
+        }
+    }
+}

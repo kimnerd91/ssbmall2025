@@ -1,0 +1,191 @@
+/* 컬러 B&W */
+
+$color01: #000000;
+$color02: #26282C;
+$color03: #484B51;
+$color04: #696E76;
+$color05: #838B94;
+$color06: #AAB0BB;
+$color07: #C6CBD0;
+$color08: #DDE1E4;
+$color09: #EBEEF0;
+$color10: #F7F7F8;
+$color11: #FFFFFF;
+
+/* PointColor */
+
+$mainPoint: #1412bb;
+$subPoint: #C0EBA6;
+
+$statusRed: #f23f3f;
+$statusYellow: #ffd338;
+$statusBlue: #287eff;
+
+/* 보더컬러 GrayTone */
+
+$BDC01: #ebeef0;
+$BDC02: #696e76;
+$BDC03: #c6cbd0;
+$BDC04: #484b51;
+$BDC05: #45484d;
+$BDC06: #86888a;
+$BDC07: #65696e;
+$BDC08: #8c8c8e;
+
+.profileMain {
+    border: 1px solid;
+    border-top: none;
+    border-bottom: none;
+    text-align: left;
+    padding: 2rem 4rem;
+    min-height: 80vh;
+
+    h1 {
+        font-size: 2rem;
+        padding: 2rem 0;
+    }
+
+    h5 {
+        font-size: 1.25rem;
+    }
+
+    h6 {
+        font-size: 1rem;
+        margin-bottom: 1.5rem !important;
+    }
+
+    .selectBox.dropdown {
+        margin: 2rem 0;
+
+
+        .dropdown-toggle {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem 1rem;
+        }
+
+        .dropdown-menu {
+            width: 100%;
+        }
+
+    }
+
+    .inputWrap {
+        .rfBox {
+            margin-bottom: 2rem;
+
+            >div {}
+
+            .labelBox {
+                margin-bottom: 0.5rem;
+                border: 1px solid;
+                border-color: $BDC05;
+                padding: 1rem;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                label {
+                    color: $color05;
+
+                    input {
+                        margin-right: 0.75rem;
+                    }
+                }
+            }
+
+            textarea {
+                width: 100%;
+                padding: 0.5rem 1rem;
+            }
+
+            ul {
+                padding-left: 2rem !important;
+
+                li {
+                    color: $statusBlue;
+                    list-style: circle;
+                    font-size: 0.75rem;
+                }
+            }
+        }
+
+        .boxButton {
+            width: 100%;
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 3rem;
+
+            button {
+                width: 100%;
+                height: 3rem;
+                font-size: 1rem;
+            }
+        }
+
+        .refundAccount {
+            input[type="text"] {
+                width: 100%;
+            }
+
+            div {
+                label {
+                    margin-right: 1rem;
+                    margin-bottom: 1rem;
+                }
+
+                input[type="radio"] {
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+    }
+
+    .refundBtn button {
+        background-color: $color02;
+        color: $color11!important;
+        width: 25%;
+        margin-top: 0.75rem;
+        padding: 0.25rem;
+    }
+
+    .refundAccount {
+        ul {
+            padding-left: 0!important;
+            li {
+                list-style: none;
+
+                
+            }
+            li::marker {
+                display: none!important;
+            }
+            
+        }
+    }
+
+     .fake {
+         border: 1px solid;
+         border-color: $BDC05;
+         width: 8rem;
+         aspect-ratio: 1/1;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+
+         i {
+             font-size: 3rem;
+         }
+
+         input {
+             position: absolute;
+             width: 8rem;
+             aspect-ratio: 1/1;
+             opacity: 0;
+             cursor: pointer;
+
+         }
+     }
+}

@@ -1,0 +1,151 @@
+/* 컬러 B&W */
+
+$color01: #000000;
+$color02: #26282C;
+$color03: #484B51;
+$color04: #696E76;
+$color05: #838B94;
+$color06: #AAB0BB;
+$color07: #C6CBD0;
+$color08: #DDE1E4;
+$color09: #EBEEF0;
+$color10: #F7F7F8;
+$color11: #FFFFFF;
+
+/* PointColor */
+
+$mainPoint: #1412bb;
+$subPoint: #C0EBA6;
+
+$statusRed: #f23f3f;
+$statusYellow: #ffd338;
+$statusBlue: #287eff;
+
+/* 보더컬러 GrayTone */
+
+$BDC01: #ebeef0;
+$BDC02: #696e76;
+$BDC03: #c6cbd0;
+$BDC04: #484b51;
+$BDC05: #45484d;
+$BDC06: #86888a;
+$BDC07: #65696e;
+$BDC08: #8c8c8e;
+
+.joinWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 0;
+
+    .inputBox {
+
+        label {
+            margin-bottom: 1rem;
+        }
+
+        input[type="text"],
+        [type="password"],
+        [type="email"] {
+            border: 1px solid;
+            border-color: $BDC05;
+            width: 100%;
+            margin-bottom: 0.5rem;
+            max-height: 50px;
+            padding: 1rem;
+            color: $color02;
+
+            &::placeholder {
+                color: $color04;
+            }
+        }
+
+        .address {
+            gap: 1rem;
+            input {
+                width: 60%;
+            }
+            button {
+                width: 10rem;
+                background-color: $color02;
+                color: $color11;
+                max-height: 50px;
+                padding: 1rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+            }
+        }
+    }
+
+    input[type="checkbox"] {
+        border-color: $BDC05;
+        border: 1px solid;
+        width: 1rem;
+    }
+
+    label {
+        button {
+            text-decoration: underline;
+        }
+    }
+    label.ml-2 {
+        margin-left: 0.5rem;
+    }
+}
+
+#apply1, #apply2 {
+
+    .modal-dialog {
+        width: 33%!important;
+        max-width: 600px!important;
+    }
+
+
+    .modal-header {
+        border-bottom: 1px solid;
+        border-color: $BDC03;
+        display: flex;
+        justify-content: center;
+
+        img {
+            height: 3rem;
+            padding: 0.5rem 0;
+        }
+    }
+    .modal-body {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding: 1.875rem;
+        padding-bottom: 0;
+    }
+    label {
+        font-size: 1.5rem;
+    }
+    textarea {
+        border: 1px solid;
+        border-color: $BDC05;
+        color: $color02;
+        min-height: 30rem;
+        margin: 1.5rem 0 3rem 0;
+    }
+
+    .modal-footer {
+        padding: 1.875rem;
+        button {
+            font-size: 1.25rem;
+            border-radius: 0;
+            padding: 1rem 0;
+        }
+    }
+}
+
+// 반응형 // 
+
+@media screen and (max-width: 500px) {
+    .joinWrap {
+        padding: 3rem 1.25rem;
+    }
+}

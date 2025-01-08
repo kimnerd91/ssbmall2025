@@ -1,0 +1,375 @@
+/* 컬러 B&W */
+
+$color01: #000000;
+$color02: #26282C;
+$color03: #484B51;
+$color04: #696E76;
+$color05: #838B94;
+$color06: #AAB0BB;
+$color07: #C6CBD0;
+$color08: #DDE1E4;
+$color09: #EBEEF0;
+$color10: #F7F7F8;
+$color11: #FFFFFF;
+
+/* PointColor */
+
+$mainPoint: #1412bb;
+$subPoint: #C0EBA6;
+
+$statusRed: #f23f3f;
+$statusYellow: #ffd338;
+$statusBlue: #287eff;
+
+/* 보더컬러 GrayTone */
+
+$BDC01: #ebeef0;
+$BDC02: #696e76;
+$BDC03: #c6cbd0;
+$BDC04: #484b51;
+$BDC05: #45484d;
+$BDC06: #86888a;
+$BDC07: #65696e;
+$BDC08: #8c8c8e;
+
+
+main {
+
+    margin: 0 auto;
+    padding-top: 1.5rem;
+
+    /* 신상품 */
+    .newItems {
+        h3 {
+            font-size: 2rem;
+            margin-top: 3rem;
+
+        }
+
+        .itemWrap {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+            position: relative;
+
+            .ItemBoxes {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                border: 1px solid;
+                border-color: $BDC03;
+                padding: 1rem 0.25rem 4rem 0.25rem;
+                background-color: $color11;
+                overflow-y: hidden;
+
+                img {
+                    width: 100%;
+                    margin-bottom: 1rem;
+
+                }
+
+                .ogImg {
+
+                    display: block;
+                    transition: all 1s;
+
+                }
+
+                .changeImg {
+                    display: none;
+                }
+
+                .itemsInfo {
+
+                    p,
+                    span {
+                        color: $color05;
+                    }
+
+                    h5,
+                    h6 {
+                        color: $color01;
+                    }
+
+                    h5 {
+                        font-size: 1.25rem;
+                    }
+
+                    p,
+                    span {
+                        font-size: 0.75rem;
+                    }
+
+                    h6 {
+                        font-size: 1.25rem;
+                        margin: 0;
+                        padding: 0;
+                        line-height: 1.25;
+                    }
+
+                    p {
+                        margin: 0.25rem 0 !important;
+                    }
+
+                    span {
+                        text-decoration: line-through;
+                    }
+                }
+
+                .itemsDiscount {
+                    background-color: $color02;
+                    position: absolute;
+                    border-radius: 100%;
+                    font-size: 0.5rem;
+                    display: flex;
+                    align-items: flex-end;
+                    gap: 0.125rem;
+                    color: $color11;
+                    padding: 0.5rem;
+                    top: 0.5rem;
+
+                    p {
+                        color: $color11;
+                        font-size: 1rem;
+
+                    }
+                }
+
+                &:hover {
+                    .itemsButton {
+                        bottom: 0;
+                        
+                    }
+
+                    .itemWish {
+                        transform: scale(1);
+                    }
+
+                    .ogImg {
+                        display: none;
+                    }
+
+                    .changeImg {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+    }
+
+    /* 이벤트 */
+    .event {
+        h3 {
+            margin-top: 5rem;
+            margin-bottom: 1.5rem !important;
+        }
+    }
+
+    .bestItems {
+        h3 {
+            margin-top: 6rem;
+            margin-bottom: 1.5rem !important;
+        }
+
+        .itemWrap {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+            position: relative;
+
+            .ItemBoxes {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                border: 1px solid;
+                border-color: $BDC03;
+                padding: 1rem 0.25rem 4rem 0.25rem;
+                background-color: $color11;
+                overflow-y: hidden;
+
+                img {
+                    width: 100%;
+                    margin-bottom: 1rem;
+                }
+
+                .ogImg {
+
+                    display: block;
+                    transition: all 1s;
+
+                }
+
+                .changeImg {
+                    display: none;
+                }
+
+                .itemsInfo {
+
+                    p,
+                    span {
+                        color: $color05;
+                    }
+
+                    h5,
+                    h6 {
+                        color: $color01;
+                    }
+
+                    h5 {
+                        font-size: 1.25rem;
+                    }
+
+                    p,
+                    span {
+                        font-size: 0.75rem;
+                    }
+
+                    h6 {
+                        font-size: 1.25rem;
+                        margin: 0;
+                        padding: 0;
+                        line-height: 1.25;
+                    }
+
+                    p {
+                        margin: 0.25rem 0 !important;
+                    }
+
+                    span {
+                        text-decoration: line-through;
+                    }
+                }
+
+                .itemsDiscount {
+                    background-color: $color02;
+                    position: absolute;
+                    border-radius: 100%;
+                    font-size: 0.5rem;
+                    display: flex;
+                    align-items: flex-end;
+                    gap: 0.125rem;
+                    color: $color11;
+                    padding: 0.5rem;
+                    top: 0.5rem;
+
+                    p {
+                        color: $color11;
+                        font-size: 1rem;
+
+                    }
+                }
+
+                &:hover {
+                    .itemsButton {
+                        bottom: 0;
+                    }
+
+                    .itemWish {
+                        transform: scale(1);
+                    }
+
+                    .ogImg {
+                        display: none;
+                    }
+
+                    .changeImg {
+                        display: block;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .smallBanner {
+        margin-top: 3rem;
+        margin-bottom: 5.5rem;
+    }
+
+    .itemsButton {
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+
+        transition: all 0.5s;
+
+        .btn-secondary {
+            border-top: 1px solid;
+            border-color: $BDC06 !important;
+            border-left: none !important;
+            border-right: none !important;
+            border-bottom: none !important;
+
+            i {
+                font-size: 1.5rem;
+            }
+        }
+        button {
+            padding: 0;
+        }
+        button a {
+            color: $color11;
+            display: block;
+            width: 100%;
+                padding: 0.75rem 0;
+        }
+    }
+
+    .itemWish {
+        position: absolute;
+        top: 0.75rem;
+        right: 0;
+        transform: scale(0);
+        transition: all 0.5s;
+
+        button.active {
+            i {
+                color: $statusRed;
+            }
+        }
+
+        i {
+            font-size: 1.8rem;
+            color: $color04
+        }
+    }
+
+}
+
+/* 반응형 */
+
+
+@media screen and (max-width:500px) {
+    main {
+        padding-top: 1rem;
+        .newItems, .bestItems {
+            .itemWrap {
+                .ItemBoxes {
+                    width: 50%;
+                    padding-bottom: 1rem;
+
+                    .itemsInfo {
+                        h5, h6 {
+                            font-size: 1rem;
+                        }
+                        p, span {
+                            font-size: 0.5rem;
+                        }
+                    }
+                    .itemsButton, .itemWish {
+                        display: none!important;
+                    }
+                    .itemsDiscount {
+                        display: none;
+                    }
+                }
+            }
+
+            h3 {
+                font-size: 1rem;
+                margin-top: 1rem;
+            }
+        }
+    }
+}

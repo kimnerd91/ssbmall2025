@@ -1,0 +1,1223 @@
+/* 컬러 B&W */
+
+$color01: #000000;
+$color02: #26282C;
+$color03: #484B51;
+$color04: #696E76;
+$color05: #838B94;
+$color06: #AAB0BB;
+$color07: #C6CBD0;
+$color08: #DDE1E4;
+$color09: #EBEEF0;
+$color10: #F7F7F8;
+$color11: #FFFFFF;
+
+/* PointColor */
+
+$mainPoint: #1412bb;
+$subPoint: #C0EBA6;
+
+$statusRed: #f23f3f;
+$statusYellow: #ffd338;
+$statusBlue: #287eff;
+
+/* 보더컬러 GrayTone */
+
+$BDC01: #ebeef0;
+$BDC02: #696e76;
+$BDC03: #c6cbd0;
+$BDC04: #484b51;
+$BDC05: #45484d;
+$BDC06: #86888a;
+$BDC07: #65696e;
+$BDC08: #8c8c8e;
+
+
+// 헤더 스크롤 관련
+
+header.scrolled .headerTop {
+    transform: translateY(-100%);
+    /* Hide headerTop */
+}
+
+header.scrolled .headerBottom {
+    position: fixed;
+    /* Stick headerBottom */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    gap: 1.5rem;
+}
+
+// 헤더 전체
+
+header {
+
+    margin: 0 auto;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+
+    .headerTop {
+        .sideMenu {
+            margin-right: 1.25rem;
+
+            ul {
+                gap: 0.5rem;
+
+                li {
+
+                    button,
+                    a {
+                        font-size: 0.75rem;
+                        font-weight: 300;
+                        color: $color01 !important;
+
+                        &:hover {
+                            color: $mainPoint !important;
+                        }
+
+                    }
+
+                }
+            }
+        }
+
+        .headerLogo {
+            padding: 0.75rem 0;
+
+            img {
+                height: 2rem;
+            }
+        }
+    }
+
+
+}
+
+.header2 {
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+
+
+
+    .headerBottom {
+        padding-top: 1.5rem;
+        background-color: $color11;
+        padding-bottom: 1rem;
+
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        border-bottom: 1px solid;
+        border-color: $BDC03;
+        ;
+
+        .megaMenuBtn {
+            h6 {
+                font-size: 1rem;
+            }
+
+            i {
+                font-size: 1.2rem;
+            }
+        }
+
+        .listMenu {
+            ul {
+                gap: 6rem;
+
+                li {
+                    margin-top: 2px;
+
+                    a {
+                        color: $color02 !important;
+                        text-decoration: none;
+
+                        &:hover {}
+                    }
+
+                    em {
+                        opacity: 0;
+                        ;
+                        height: 2px;
+                        display: block;
+                        background-color: $mainPoint;
+                        transition: opacity 0.5s ease,
+                            transform 0.3s ease;
+                        transform: translateX(-20px);
+                    }
+
+                    &:hover {
+                        em {
+                            opacity: 1;
+                            transform: translateX(0);
+                        }
+                    }
+                }
+            }
+        }
+
+        .searchBtn {
+            margin-right: 1.25rem;
+
+            button {
+                padding: 0;
+                font-size: 0.75rem;
+
+                &:hover {
+                    color: $mainPoint !important;
+                }
+            }
+        }
+
+        .megaMenu {
+            top: -10vh;
+            left: -100%;
+            height: 110vh;
+            border-bottom: 1px solid;
+            border-color: $BDC03;
+            transform: translateX(100%);
+
+            background-color: $color11;
+
+
+            .megaMenuFirst {
+                border-right: 1px solid;
+                border-color: $BDC03;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                ul {
+                    gap: 3rem;
+                    padding-top: 2rem;
+                    padding-bottom: 3rem;
+                    justify-content: center;
+
+
+                    li {
+
+                        a {
+                            font-size: 2.5rem;
+                            color: $color05 !important;
+                        }
+
+                        em {
+                            opacity: 0;
+                            ;
+                            height: 3px;
+                            display: block;
+                            background-color: $mainPoint;
+                            transition: opacity 0.5s ease,
+                                transform 0.5s ease;
+                            transform: translateX(-50%);
+                            width: 100%;
+                        }
+
+
+
+                    }
+
+                    li.active {
+                        a {
+                            color: $color02 !important;
+
+                        }
+
+                        em {
+                            opacity: 1;
+                            transform: translateX(0%);
+                        }
+
+
+                    }
+
+                }
+            }
+
+            .megaMenuSecond {
+                ul {
+                    gap: 6rem;
+                    padding: 2.25rem 0 0 0;
+                    margin-left: 2rem;
+
+
+                    li {
+                        &:hover {
+                            .fw-400 {
+                                color: $mainPoint;
+                                font-weight: bold;
+                            }
+                        }
+
+                        a {
+                            font-size: 1rem;
+                            color: $color02;
+                            margin-bottom: 0;
+                        }
+
+                        ul {
+                            margin-left: 0;
+                            gap: 1rem;
+                            padding-top: 1.5rem;
+
+                            li {
+
+                                &:hover {
+                                    a {
+                                        color: $mainPoint;
+                                        font-weight: bold;
+                                    }
+                                }
+
+                                a {
+                                    font-size: 0.9rem;
+                                    color: $color03;
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 오프캔버스
+
+// 검색
+
+.offcanvas.offcanvas-start.offSearch {
+    right: 0;
+    left: auto;
+    transform: translateX(100%);
+    padding: 0 1.25rem;
+
+    input {
+        border: none;
+        border-bottom: 1px solid;
+        border-color: $color04;
+        width: 100%;
+        padding: 0.5rem;
+
+
+        &::placeholder {
+            font-size: 1rem;
+            color: $color03;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+    }
+
+    .offcanvas-header {
+        margin-bottom: 5rem;
+    }
+
+    .offcanvas-body {
+        >div {
+            position: relative;
+
+            button {
+                position: absolute;
+                right: 0.25rem;
+            }
+        }
+    }
+
+    .searchedText {
+        margin-top: 4rem;
+        width: 100%;
+
+        h6 {
+            text-align: left;
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        ul {
+            li {
+                a {
+                    font-size: 0.75rem;
+                    color: $color03;
+                }
+            }
+        }
+
+    }
+
+}
+
+// 카트
+.offcanvas.offcanvas-start.offCart {
+    right: 0;
+    left: auto;
+    transform: translateX(100%);
+
+
+    .offcanvas-header {
+
+        justify-content: center;
+        border-bottom: 1px solid;
+        border-color: $BDC05;
+        padding: 1.5rem 0;
+
+        h5 {
+            font-size: 1rem;
+            color: $color01;
+        }
+
+        .btn-close {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            ;
+            margin: auto;
+        }
+    }
+
+    .offcanvas-body {
+        padding: 1.5rem 1.25rem;
+
+        ul {
+            li {
+                overflow-x: hidden;
+
+                .itemWrap {
+                    gap: 1.5rem;
+                    position: relative;
+
+                    button {
+                        font-size: 0.6rem;
+                        text-decoration: underline;
+                        color: $color02;
+                        bottom: 0;
+                        right: 0;
+                    }
+
+                    img {
+                        width: 100%;
+                        aspect-ratio: 1/1;
+                    }
+
+                    div.itemImg {
+                        background-color: $color08;
+                        border: 0.25rem;
+                        text-align: left;
+                    }
+
+                    div.itemText {
+                        h5 {
+                            color: $color01;
+                            font-size: 1.25rem;
+                        }
+
+                        h6 {
+                            color: $color02;
+                            font-size: 1rem;
+                            margin-top: 0.25rem;
+                        }
+
+                        p {
+                            color: $color05;
+                            font-size: 0.85rem;
+                        }
+
+                        span {
+                            color: $color05;
+                            width: 100%;
+                        }
+
+                        text-align: left;
+                        line-height: 1.25;
+                    }
+
+                }
+            }
+
+            .cleanBtn {
+                button {
+                    width: 100%;
+                }
+            }
+        }
+
+        .emptyCart {
+            p {
+                padding-top: 8rem;
+            }
+        }
+
+        .cleanBtn {
+            position: absolute;
+            bottom: 1rem;
+            max-width: 90%;
+            width: 100%;
+        }
+    }
+}
+
+//위시리스트
+.offcanvas.offcanvas-start.offWish {
+    right: 0;
+    left: auto;
+    transform: translateX(100%);
+
+
+    .offcanvas-header {
+
+        justify-content: center;
+        border-bottom: 1px solid;
+        border-color: $BDC05;
+        padding: 1.5rem 0;
+
+        h5 {
+            font-size: 1rem;
+            color: $color01;
+        }
+
+        .btn-close {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            ;
+            margin: auto;
+        }
+    }
+
+    .offcanvas-body {
+        padding: 1.5rem 1.25rem;
+
+        ul {
+            li {
+                overflow-x: hidden;
+
+                .itemWrap {
+                    gap: 1.5rem;
+                    position: relative;
+
+                    button {
+                        font-size: 0.6rem;
+                        text-decoration: underline;
+                        color: $color02;
+                        bottom: 0;
+                        right: 0;
+                    }
+
+                    img {
+                        width: 100%;
+                        aspect-ratio: 1/1;
+                    }
+
+                    div.itemImg {
+                        background-color: $color08;
+                        border: 0.25rem;
+                        text-align: left;
+                    }
+
+                    div.itemText {
+                        h5 {
+                            color: $color01;
+                            font-size: 1.25rem;
+                        }
+
+                        h6 {
+                            color: $color02;
+                            font-size: 1rem;
+                            margin-top: 0.25rem;
+                        }
+
+                        p {
+                            color: $color05;
+                            font-size: 0.85rem;
+                        }
+
+                        span {
+                            color: $color05;
+                            width: 100%;
+                        }
+
+                        text-align: left;
+                        line-height: 1.25;
+                    }
+
+                }
+            }
+
+            .cleanBtn {
+                button {
+                    width: 100%;
+                }
+            }
+        }
+
+        .emptyCart {
+            p {
+                padding-top: 8rem;
+            }
+        }
+
+        .cleanBtn {
+            position: absolute;
+            bottom: 1rem;
+            max-width: 90%;
+            width: 100%;
+        }
+    }
+}
+
+// 로그인
+.offcanvas.offcanvas-start.offLogin {
+    right: 0;
+    left: auto;
+    transform: translateX(100%);
+
+    .offcanvas-header {}
+
+    .offcanvas-body {
+        padding: 0;
+
+        .nav {
+            border-top: 1px solid;
+            border-color: $BDC05;
+
+
+            .nav-item {
+                .nav-link {
+                    border-top: none;
+                    border-radius: 0;
+                    border-color: $BDC03 !important;
+                    color: $color05;
+                    font-size: 1rem;
+                    padding: 0.5rem 0;
+
+                    &:first-child.active {
+                        border-left: none;
+                    }
+                }
+
+                .nav-link.active {
+
+                    border-color: $color01 !important;
+                    color: $color01;
+
+                }
+
+
+            }
+        }
+
+        .loginWrap {
+            padding: 0 1.25rem;
+            margin-top: 3rem;
+
+            .loginInput {
+
+                label {
+                    font-size: 1.25rem;
+                    margin-bottom: 1rem;
+                }
+
+                input[type="email"],
+                [type="password"],
+                [type="text"] {
+                    border: none;
+                    border-bottom: 1px solid;
+                    border-color: $color04;
+                    width: 100%;
+                    padding: 0.25rem 0.5rem;
+
+
+                    &::placeholder {
+                        font-size: 1rem;
+                        color: $color03;
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+
+                }
+
+                .loginPassword {
+                    margin-bottom: 0.5rem;
+                    margin-top: 2rem;
+                }
+
+                .loginAuto {
+                    label {
+                        font-size: 0.75rem;
+                    }
+
+                    input[type="checkbox"] {
+                        width: 1rem;
+                        height: 1rem;
+                    }
+                }
+
+            }
+
+
+
+            .loginButtonWrap {
+                margin-top: 1.75rem;
+
+                .btn-primary {
+                    width: 100%;
+                }
+
+                .buttonWrap {
+                    margin-top: 1.25rem;
+                    margin-bottom: 2rem;
+
+
+
+
+
+                    li {
+                        margin: 0 2.11rem;
+
+                        a,
+                        button {
+                            color: $color03;
+                            font-size: 0.75rem;
+                        }
+
+                    }
+
+                    span {
+                        margin: 0 0.6rem;
+                        color: $BDC03 !important;
+                    }
+                }
+            }
+
+        }
+
+        .socialLogin {
+            gap: 1px;
+
+            div {
+                border: 1px solid;
+                padding: 0.25rem 0.25rem;
+
+
+
+                a {
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                        aspect-ratio: 1/1;
+                        max-width: 2rem;
+                    }
+
+                    p {
+                        font-size: 0.8rem;
+                        margin-bottom: 0;
+                        color: $color01;
+                    }
+                }
+            }
+
+            .naver {
+                border-color: #00BF18;
+            }
+
+            .google {
+                border-color: $BDC03;
+            }
+
+            .kakao {
+                border-color: #3B1D1E;
+            }
+        }
+
+        .loginAddText {
+            margin-top: 6rem;
+            padding: 0 1.25rem;
+
+            h6 {
+                margin-bottom: 1rem !important;
+                font-size: 0.75rem;
+            }
+
+            li {
+                font-size: 0.75rem;
+            }
+        }
+
+        .guestWrap {
+            padding: 0 1.25rem;
+            margin-top: 3rem;
+
+            div {
+                text-align: left;
+                margin-bottom: 2rem;
+
+                label {
+                    font-size: 1.25rem;
+                    margin-bottom: 1rem;
+                }
+
+                input[type="email"],
+                [type="text"] {
+                    border: none;
+                    border-bottom: 1px solid;
+                    border-color: $color04;
+                    width: 100%;
+                    padding: 0.25rem 0.5rem;
+
+
+                    &::placeholder {
+                        font-size: 1rem;
+                        color: $color03;
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+
+                }
+
+                .loginPassword {
+                    margin-bottom: 0.5rem;
+                    margin-top: 2rem;
+                }
+
+                .loginAuto {
+                    label {
+                        font-size: 0.75rem;
+                    }
+
+                    input[type="checkbox"] {
+                        width: 1rem;
+                        height: 1rem;
+                    }
+                }
+
+            }
+
+            .loginButtonWrap {
+                margin-top: 1.75rem;
+
+                button {
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+}
+
+// 비밀번호찾기
+.offcanvas.offcanvas-start.offFP {
+    right: 0;
+    left: auto;
+    transform: translateX(100%);
+
+    .offcanvas-header {
+
+        justify-content: center;
+        border-bottom: 1px solid;
+        border-color: $BDC05;
+        padding: 1.5rem 0;
+
+        h5 {
+            font-size: 1rem;
+            color: $color01;
+        }
+
+        .btn-close {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            ;
+            margin: auto;
+        }
+    }
+
+    .offcanvas-body {
+        text-align: left;
+
+        h2 {
+            font-size: 1.25rem;
+            text-align: left;
+            margin: 3rem 0 4rem 0 !important;
+        }
+
+        label {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        input[type="email"],
+        [type="password"] {
+            border: none;
+            border-bottom: 1px solid;
+            border-color: $color04;
+            width: 100%;
+            padding: 0.25rem 0.5rem;
+
+
+            &::placeholder {
+                font-size: 1rem;
+                color: $color03;
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+        }
+
+        .findPasswordBtn {
+            margin-top: 4rem;
+
+            button {
+                width: 100%;
+            }
+        }
+    }
+}
+
+// 트랜지션 
+
+.slide-enter-active,
+.slide-leave-active {
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.slide-enter-from {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.slide-enter-to {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.slide-leave-from {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.slide-leave-to {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.mobileHeader {
+    display: none;
+}
+
+
+
+/* 반응형 */
+
+@media screen and (min-width:500px) and (max-width:1024px) {
+
+    .header2 {
+        .headerBottom {
+            .magaMenu {
+                .megaMenuFirst {
+                    align-items: flex-start !important;
+
+                    ul {
+                        li {
+                            a {
+                                font-size: 1rem !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+
+@media screen and (max-width:500px) {
+
+    header {
+        .headerTop {
+            .headerLogo {
+                padding: 0.5rem 0;
+
+                img {
+                    height: 1.5rem;
+                }
+            }
+        }
+    }
+
+    .megaMenuFirst {
+        align-items: flex-start !important;
+    }
+
+    .mobileHeader {
+        display: block;
+        min-height: 4rem;
+        position: fixed;
+        bottom: 0;
+        width: 100vw;
+        background-color: $color02;
+        padding-top: 0.5rem;
+        z-index: 9999;
+
+        ul {
+            li {
+                button {
+                    align-items: center;
+                    justify-content: center;
+                    color: $color11;
+
+                    i {
+                        font-size: 1.5rem;
+                    }
+
+                    p {
+                        font-size: 0.75rem;
+                    }
+                }
+            }
+        }
+
+    }
+
+    #offcanvasMobile {
+
+        .offcanvas-header {
+            border-bottom: 1px solid;
+            border-color: $BDC05;
+            justify-content: center;
+            border-bottom: 1px solid;
+            border-color: #45484d;
+            padding: 1.5rem 0;
+
+            .btn-close {
+                position: absolute;
+                right: 1rem;
+                top: 1rem;
+                margin: auto;
+
+
+            }
+
+        }
+
+        .offcanvas-body {
+            padding: 0;
+        }
+
+        ul {
+            li {
+                border-top: 1px solid;
+
+                border-color: $BDC05;
+                padding: 1.25rem 0;
+                margin-top: -1px;
+
+                &:hover {
+                    background-color: $mainPoint;
+
+                    p {
+                        color: $color11 !important;
+                    }
+
+                }
+
+                .active {
+                    a {
+                        color: $color11 !important;
+                    }
+                }
+
+                a {
+                    padding: 1.25rem 0;
+                }
+
+                button {
+                    width: 100%;
+
+                    p {
+                        font-size: 1rem;
+                        padding-left: 0.5rem;
+                        text-align: left;
+                        width: 85%;
+                    }
+
+                    i {
+                        padding-right: 1rem;
+                    }
+                }
+
+
+
+
+
+
+            }
+        }
+
+        .btn-back {
+            position: absolute;
+            left: 1rem;
+            top: 1.7rem;
+            margin: auto;
+
+
+            i {
+                font-size: 1.5rem;
+                color: $color04;
+            }
+        }
+
+        .secondMenu,
+        .thirdMenu,
+        .lastMenu {
+
+
+
+            button {
+                a {
+                    color: $color02;
+                    padding: 0;
+                    width: 100%;
+                }
+
+                button {
+                    width: auto;
+                }
+            }
+
+        }
+    }
+
+
+    header {
+        padding-top: 1rem;
+
+        .headerTop {
+            .sideMenu {
+                display: none !important;
+            }
+        }
+    }
+
+    .header2 {
+        left: 0 !important;
+        width: 100vw;
+        padding-top: 0;
+
+        .headerBottom {
+
+            gap: 0.5rem;
+            justify-content: flex-start !important;
+            align-items: center;
+            padding-left: 7.5%;
+            padding-top: 1rem;
+            border-top: 1px solid;
+            border-color: $BDC03;
+
+
+            .megaMenuBtn {
+                display: none !important;
+
+                button {
+
+                    h6 {
+                        display: none;
+                    }
+
+                    i {
+                        font-size: 2rem;
+                    }
+                }
+            }
+
+            .listMenu {
+                ul {
+                    gap: 2rem;
+                }
+            }
+
+            .searchBtn {
+                display: none !important;
+
+                span {
+                    display: none;
+                }
+
+                i {
+                    font-size: 1.15rem;
+                }
+            }
+        }
+
+
+    }
+
+
+    .offcanvas.offcanvas-start {
+        width: 100vw !important;
+    }
+
+    .offcanvas.offcanvas-start.offCart {
+        .offcanvas-body {
+            .cleanBtn {
+                bottom: 5rem;
+            }
+
+            .itemWrap {
+                overflow: hidden;
+            }
+        }
+    }
+
+    .offcanvas.offcanvas-start.offLogin {
+        .offcanvas-body {
+            .loginWrap {
+                .loginButtonWrap {
+                    .buttonWrap {
+                        li {
+                            margin: 0;
+
+                            a,
+                            button {
+                                display: block;
+                                width: 5.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .socialLogin {
+                div {
+                    a {
+                        p {
+                            font-size: 0.5rem;
+                        }
+                    }
+                }
+            }
+
+            .loginAddText {
+                li {
+                    font-size: 0.7rem;
+                }
+            }
+        }
+    }
+}

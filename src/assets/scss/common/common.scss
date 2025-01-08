@@ -1,0 +1,417 @@
+/* 컬러 B&W */
+
+$color01: #000000;
+$color02: #26282C;
+$color03: #484B51;
+$color04: #696E76;
+$color05: #838B94;
+$color06: #AAB0BB;
+$color07: #C6CBD0;
+$color08: #DDE1E4;
+$color09: #EBEEF0;
+$color10: #F7F7F8;
+$color11: #FFFFFF;
+
+/* PointColor */
+
+$mainPoint: #347928;
+$subPoint: #C0EBA6;
+
+$statusRed: #f23f3f;
+$statusYellow: #ffd338;
+$statusBlue: #287eff;
+
+/* 보더컬러 GrayTone */
+
+$BDC01: #ebeef0;
+$BDC02: #696e76;
+$BDC03: #c6cbd0;
+$BDC04: #484b51;
+$BDC05: #45484d;
+$BDC06: #86888a;
+$BDC07: #65696e;
+$BDC08: #8c8c8e;
+
+/* 폰트 웨이트 */
+
+.fw-300 {
+    font-family: "SUIT-Light" !important;
+    font-weight: 300;
+}
+
+.fw-400 {
+    font-family: "SUIT-Regular" !important;
+    font-weight: 400;
+}
+
+.fw-500 {
+    font-family: "SUIT-Medium" !important;
+    font-weight: 500;
+    ;
+}
+
+.fw-700 {
+    font-family: "SUIT-SemiBold" !important;
+    font-weight: 600;
+    ;
+}
+
+.fw-900 {
+    font-family: "SUIT-Bold" !important;
+    font-weight: 700;
+    ;
+}
+
+
+/* 인풋, 셀렉트 */
+
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select,
+textarea {
+    background-color: $color11;
+    border: 1px solid $BDC05;
+    color: $color02;
+
+    &::placeholder {
+        color: $color04;
+    }
+}
+
+/* 버튼 */
+
+button.btn-primary {
+    background-color: $color02 !important;
+    border: 1px solid !important;
+    border-color: $color02 !important;
+    color: $color11 !important;
+    padding: 0.75rem 0;
+    font-size: 1.25rem;
+    transition: all 0.5s;
+
+    &:hover {
+        background-color: $color11!important;
+        border-color: $BDC03!important;
+        color: $color02!important;
+
+
+        a {
+            color: $color02;
+        }
+    }
+}
+
+button.btn-secondary {
+    background-color: $color11 !important;
+    border: 1px solid !important;
+    border-color: $BDC03 !important;
+    color: $color02 !important;
+    padding: 0.75rem 0;
+    font-size: 1.25rem;
+    transition: all 0.5s;
+}
+
+
+/* 폰트페이스 */
+
+@font-face {
+    font-family: 'SUIT-Light';
+    src: url("@/assets/font/SUIT-Light.otf") format('otf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SUIT-Regular';
+    src: url("@/assets/font/SUIT-Regular.otf") format('otf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SUIT-Medium';
+    src: url("@/assets/font/SUIT-Medium.otf") format('otf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SUIT-SemiBold';
+    src: url("@/assets/font/SUIT-SemiBold.otf") format('otf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SUIT-Bold';
+    src: url("@/assets/font/SUIT-Bold.otf") format('otf');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+// 모달
+
+.modal-body::-webkit-scrollbar {
+    display: none;
+}
+
+.modal.useHeader {
+    .modal-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        button {
+            display: none;
+        }
+
+        img {
+            width: 75%;
+        }
+    }
+
+    
+}
+
+.modal.noHeader {
+    .modal-header {
+        display: none;
+    }
+
+    .modal-body {
+        text-align: center;
+
+
+    }
+}
+
+.modal {
+   
+    .modal-dialog {
+         max-width: 300px !important;
+         margin: 0 auto;
+    }
+
+    .modal-body {
+        padding: 30px 40px;
+
+        .btn-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        h3 {
+            font-size: 1rem;
+            margin-bottom: 1rem !important;
+        }
+
+        p {
+
+            font-size: 0.75rem;
+        }
+    }
+}
+
+
+.modal-footer.double {
+    padding: 0;
+    margin: 0;
+    button {
+        width: 50%;
+        margin: 0;
+        height: 2.5rem;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn.btn-primary {
+        border-radius: 0 0 0.5rem 0;
+        
+        a {
+             color: $color11;
+
+            
+        }
+
+         &:hover {
+             a {
+                color: $color02;
+             }
+         }
+    }
+
+    .btn.btn-secondary {
+        border-radius: 0 0 0 0.5rem;
+
+        a {
+           
+            color: $color02;
+            
+        }
+    }
+}
+
+.modal-footer.single {
+    padding: 0;
+    margin: 0!important ;
+
+    .btn {
+        width: 100%;
+         margin: 0 !important;
+
+    }
+
+    .btn.btn-primary {
+        border-radius: 0 0 0.5rem 0.5rem;
+        font-size: 1rem;
+        padding: 0.45rem 0;
+    }
+
+}
+
+/* 페이지네이션 */
+
+ nav {
+     margin-bottom: 2rem;
+     overflow-x: scroll;
+     display: flex;
+     gap: 0.25rem;
+     width: 100%;
+     justify-content: center;
+     flex-wrap: nowrap;
+ }
+
+ .pagination {
+     gap: 0.75rem;
+
+     .page-link {
+         background-color: $color11;
+         border-color: $BDC03;
+         color: $color05;
+
+         &:focus {
+             box-shadow: none;
+         }
+
+         &:hover {
+             background-color: $mainPoint;
+             border-color: $mainPoint;
+             color: $color11;
+         }
+     }
+
+
+     .prev,
+     .prevprev,
+     .next,
+     .nextnext {
+         background-color: $color08;
+         border: 1px solid;
+         border-color: $color08;
+         color: $color05;
+
+         &:hover {
+             background-color: $mainPoint;
+             border-color: $mainPoint;
+             color: $color11;
+         }
+     }
+
+     .page-item.active {
+         z-index: -1;
+
+         .page-link {
+             background-color: $color01;
+             color: $color11;
+             border-color: $BDC05;
+         }
+     }
+
+
+ }
+
+/* 메인 css */
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "SUIT-Regular";
+    overflow-x: hidden;
+    color: $color02;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+    margin-top: 0;
+    margin-bottom: 0 !important;
+
+}
+
+dl,
+ol,
+ul {
+    list-style: none;
+    padding-left: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+a {
+    text-decoration: none !important;
+
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+.offcanvas {
+    width: 30rem !important;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+input {
+    &::placeholder {
+        font-size: 0.85rem;
+        color: $color05 !important;
+    }
+}
+
+
+
+// 반응형 //
+
+@media screen and (max-width: 500px) {
+    html {
+        overflow-x: hidden;
+    }
+
+    body {
+        font-size: 12px!important;
+    }
+}
